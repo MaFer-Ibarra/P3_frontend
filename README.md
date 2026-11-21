@@ -5,7 +5,7 @@ Lista, agrega y elimina productos. La API está protegida con variables de entor
 
 > ### Integrantes
 > - **Integrante 1:** Ibarra Ibarra Maria Fernanda · 232310080
-> - **Integrante 2:** Zavala Anguiano Valeria · 232310080
+> - **Integrante 2:** Zavala Anguiano Valeria · 232310127
 >
 > **Materia:** Programación Web · Grupo 4X7B
 > **Práctica:** P3 · Desplegar y asegurar la API en la nube
