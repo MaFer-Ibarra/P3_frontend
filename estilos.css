@@ -1,0 +1,150 @@
+:root {
+  --azul: #1f4e8c;
+  --azul-oscuro: #163a69;
+  --naranja: #f08a24;
+  --naranja-oscuro: #d9760f;
+  --rojo: #d64545;
+  --rojo-oscuro: #b83232;
+  --fondo: #f2f4f7;
+  --texto: #1e2a3a;
+  --gris: #6b7685;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+/* ---------- Encabezado y formulario ---------- */
+header {
+  background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));
+  color: white;
+  padding: 32px 20px 24px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .18);
+}
+
+header h1 {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  letter-spacing: .5px;
+}
+
+#formProducto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+input {
+  flex: 1 1 180px;
+  max-width: 240px;
+  padding: 11px 14px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  color: var(--texto);
+  transition: border-color .2s, box-shadow .2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 3px rgba(240, 138, 36, .3);
+}
+
+button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .15s, background .2s, box-shadow .2s;
+}
+
+header button {
+  background: var(--naranja);
+  color: white;
+}
+
+header button:hover {
+  background: var(--naranja-oscuro);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+}
+
+#mensaje {
+  min-height: 22px;
+  margin: 16px 0 0;
+  font-size: .95rem;
+  opacity: .95;
+}
+
+/* ---------- Tarjetas ---------- */
+#resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  border-top: 5px solid var(--azul);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .16);
+}
+
+.tarjeta h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: var(--azul);
+}
+
+.tarjeta p {
+  margin: 0 0 16px;
+  color: var(--gris);
+  font-size: .95rem;
+}
+
+.tarjeta button {
+  width: 100%;
+  background: var(--rojo);
+  color: white;
+}
+
+.tarjeta button:hover {
+  background: var(--rojo-oscuro);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.5rem; }
+  input { max-width: 100%; flex-basis: 100%; }
+  header button { width: 100%; }
+}
